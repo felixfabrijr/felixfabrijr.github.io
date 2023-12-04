@@ -1,0 +1,264 @@
+1<!DOCTYPE html>
+<html lang="pt-BR">
+
+<script>
+  function changeLanguage(lang) {
+    // Oculta todos os elementos com data-lang
+    document.querySelectorAll('[data-lang]').forEach(function (el) {
+      el.style.display = 'none';
+    });
+
+    // Exibe apenas os elementos correspondentes ao idioma selecionado
+    document.querySelectorAll('[data-lang="' + lang + '"]').forEach(function (el) {
+      el.style.display = 'block';
+    });
+  }
+</script>
+
+  <head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- title -->
+    <title>Felix Fabri Portfolio</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/extends.css" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar">
+      <div class="navbar__content max-width mb-0">
+        <a href="/">
+          <p> <b><i>Felix Fabri</i></b></p>
+        </a>
+        <ul data-lang="pt" class="navbar__links">
+          <li><a href="#header">Inizio</a></li>
+          <li><a href="#about">Chi sono</a></li>
+          <li><a href="#skills">Competenze</a></li>
+          <li><a href="#projects">Progetti</a></li>
+          <li><a href="#footer">Contatti</a></li>
+
+          <button onclick="changeLanguage('pt')"><img src="assets/bnd1.png"/></button>
+          <button onclick="changeLanguage('en')"><img src="assets/bnd2.png"/></button>
+        </ul>
+
+        <ul data-lang="en" style="display: none;" class="navbar__links">
+          
+          <li><a href="#header">Home</a></li>
+          <li><a href="#about">About me</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#footer">Contact</a></li>
+          <button onclick="changeLanguage('pt')"><img src="assets/bnd1.png"/></button>
+          <button onclick="changeLanguage('en')"><img src="assets/bnd2.png"/></button>
+          </ul>
+          
+
+        
+        
+
+        <div class="navbar__mobile">
+          <img src="assets/menu.svg" alt="menu" class="burguer" />
+          <ul class="mobile__links">
+            <li><a href="#header">Inizio</a></li>
+            <li><a href="#about">Chi sono</a></li>
+            <li><a href="#skills">Competenze</a></li>
+            <li><a href="#projects">Progetti</a></li>
+            <li><a href="#footer">Contatti</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- header -->
+    <header id="header" class="max-width">
+      <div class="header__left">
+
+        <!-- Exemplo com uma frase no cabeçalho -->
+    <h1 data-lang="pt">Ciao! Sono Felix Fabri, sviluppatore Backend.</h1>
+    <h1 data-lang="en" style="display: none;">Hello! I'm Felix Fabri, Backend Developer.</h1>
+
+        <p data-lang="pt">
+          Sono Felix Fabri, italo-brasiliano.
+          Sviluppatore software junior, Laureato in Scienze dell'Informatica – (Brasile).
+          Attualmente studia aggiornamenti tecnologici focalizzato sulla conoscenza back-end
+          degli strumenti; C#, ASP.NET, .Net, Razor Pages, MVC, API Web. 
+          Conoscenza in HTML, PHP, CSS e JavaScript.
+        </p>
+        <p data-lang="en" style="display: none;">
+          My name is Felix Fabri, an Italo-Brazilian.
+          I am a junior software developer, graduated in Computer Science - (Brazil).
+          Currently studying technological updates with a focus on back-end knowledge
+          of tools; C#, ASP.NET, .Net, Razor Pages, MVC, Web APIs.
+          Proficient in HTML, PHP, CSS, and JavaScript.
+        </p>
+
+        <a data-lang="pt" href="#about" class="btn btn-primary">Scopri di più!</a>
+        <a data-lang="en" style="display: none;" href="#about" class="btn btn-primary">Find out more!</a>
+      </div>
+      <div class="header__right">
+        <div class="header__image">
+          <img src="assets/felixf.png" alt="Felix Fabri" class="felix" />
+          <img src="assets/abstract.svg" alt="background" class="background" />
+        </div>
+      </div>
+    </header>
+
+    <!-- Sobre -->
+    <section id="about" class="about max-width">
+      <div class="about__left">
+        <h2 data-lang="pt" class="secondary-title">Connettiti con me:</h2>
+        <h2 data-lang="en" style="display: none;" class="secondary-title">Connect with me:</h2>
+        
+        <ul>
+          <li>
+            <a href="https://www.linkedin.com/in/felix-fabri-junior/" target="_blank"><img loading="lazy" src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
+            <a href = "mailto:felix.fabrijr@gmail.com"><img loading="lazy" src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
+          <a href="https://github.com/felixfabrijr" ><img loading="lazy" src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" target="_blank"></a>
+          </li>
+        </ul>
+      </div>
+      <div class="about__right">
+        <h3 data-lang="pt" class="tertiary-title mb-m">
+          Sviluppatore Backend appassionato di tecnologia!
+        </h3>
+        <h3 data-lang="en" style="display: none;" class="tertiary-title mb-m">
+          Backend developer passionate about technology!
+        </h3>
+        <p data-lang="pt">
+          Sono uno sviluppatore junior specializzato in C# .NET, con competenze solide in tecnologie come
+          ASP.NET, .NET, JavaScript, HTML e CSS. Appassionato di sfide tecnologiche, cerco costantemente di imparare
+          e applicare soluzioni creative per lo sviluppo software. Sono impegnato a contribuire in modo significativo ai progetti,
+          utilizzando le mie conoscenze nello sviluppo web per creare applicazioni efficienti e intuitive.
+        </p>
+        <p data-lang="en" style="display: none;">
+          I'm a junior developer specializing in C# .NET, with solid skills in technologies such as
+          ASP.NET, .NET, JavaScript, HTML and CSS. Passionate about technological challenges, I constantly try to learn
+          and apply creative solutions for software development. I am committed to contributing meaningfully to projects,
+          using my knowledge in web development to create efficient and intuitive applications.
+        </p>
+      </div>
+    </section>
+
+    <!-- habilidades -->
+    <section id="skills" class="skills">
+      <div class="skills__content max-width">
+        <h2 data-lang="pt" class="tertiary-title">Competenze Tecniche</h2>
+        <h2 data-lang="en" style="display: none;" class="tertiary-title">Technical skills</h2>
+        <p class="description">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg" width="40" height="40" />
+           
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" width="40" height="40"/>
+          
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" width="40" height="40" />
+           
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg" width="40" height="40" />
+           
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="40" height="40" />
+          
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"width="40" height="40" />
+           
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="40" height="40" />
+           
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" width="40" height="40" /> 
+
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain-wordmark.svg" width="40" height="40" />
+        </p>
+        
+          
+      </div>
+    </section>
+
+    <!-- Projetos
+    <section id="projects" class="projects max-width">
+      <div class="projects__content">
+        <h2 data-lang="pt" class="secondary-title">Progetti Principali</h2>
+        <h2 data-lang="en" style="display: none;" class="secondary-title">Projects</h2>
+        <p data-lang="pt">
+          Ecco alcuni dei miei lavori più recenti.
+        </p>
+        <p data-lang="en" style="display: none;">
+          Here are some of my most recent works.
+        </p>
+      </div>
+      <ul>
+        <li>
+          <div class="image">
+            <img src="assets/prog.png" alt="Gerenciamento de tarefas" />
+          </div>
+          <div class="projects__info">
+            <h3 class="tertiary-title">
+              Sistema CARREGAR PROJETO
+            </h3>
+            <p>
+              CRIAR UM PROJETO E CARREGAR AQUI
+            </p>
+            
+          </div>
+        </li>
+        <li class="projects__reversed-list">
+          <div class="image">
+            <img src="assets/prog.png" alt="ecommerce" />
+          </div>
+          <div class="projects__info">
+            <h3 class="tertiary-title">
+              Desenvolvimento Sistema CARREGAR PROJETO
+            </h3>
+            <p>
+              CRIAR UM PROJETO E CARREGAR AQUI
+            </p>
+            
+          </div>
+        </li>
+        <li>
+          <div class="image">
+            <img src="assets/prog.png" alt="delivery" />
+          </div>
+          <div class="projects__info">
+            <h3 class="tertiary-title">
+              Sistema CARREGAR PROJETO
+            </h3>
+            <p>
+              ACRIAR UM PROJETO E CARREGAR AQUI
+            </p>
+            
+          </div>
+        </li>
+      </ul>
+    </section>
+  -->
+
+    <!-- Footer -->
+    <footer id="footer">
+      <div class="footer__content max-width mb-0">
+        <h2 class="tertiary-title mb-s"></h2>
+        <p class="mb-m">
+          
+        </p>
+        <div class="footer__contact mb-m">
+          <span class="mb-m">felix.fabrijr@gmail.com</span>
+          
+        </div>
+        <ul class="mb-l">
+         
+        </ul>
+        <p data-lang="pt" class="footer__copyright">
+          © 2023 Felix Fabri. Tutti i diritti riservati.
+        </p>
+        <p data-lang="en" style="display: none;" class="footer__copyright">
+          © 2023 Felix Fabri. All rights reserved.
+        </p>
+      </div>
+    </footer>
+    <!-- script -->
+    <script src="scripts/index.js"></script>
+  </body>
+</html>
